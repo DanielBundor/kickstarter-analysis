@@ -1,7 +1,18 @@
-# An Analysis of Kickstarter Campaigns
-## An analysis performed on Kickstarter data to identify trends
-![]![ParentCategoryOutcomesPicture1](https://user-images.githubusercontent.com/99453696/159104318-e495943f-b949-4d04-b8bf-cd3ab0af0a59.png)
-![]![ParentCategoryOutcomesPicture2](https://user-images.githubusercontent.com/99453696/159104338-ae0515fc-1fc8-44d6-8f18-fa2320d80fd4.png)
-![]![KickstarterBoxPlotPicture](https://user-images.githubusercontent.com/99453696/159104353-b0c1499a-6116-4502-879c-4585fd08ea12.png)
-### Insight
-*Given the analysis performed, one important insight that was identified involved the main campaign goal being €4,000, which is outside the range of outliers for the amount pledged specifically for the Great Britain's market, so Louise should probably try to get her produced for less than €4,000. Half of the campaign goals are less than €2,000, which is as well just over the 3rd quartile for amounts pledged.
+# Overview of project
+* The purpose of this analysis is to help a client understand and identify how different campaigns fared in relations to two specific outcomes; "outcomes based on launch dates," and "outcomes based on goals" given that the "play" fever came close to its fundraising goal in a short amount of time using the dataset.
+## Analysis and challenges
+* Below are images of charts within my anlysis that indicate how my analysis was performed.  In order for me to have established the outcomes based on launch dates and goals, I had to create separate worksheets within the workbook to pull out the needed datapoints to help me identify these outcomes. For outcomes based on launch dates, I had to create a pivot table; thus using distinct pivot tabel fields specific to the dataset. I went on to filter the parent category and years columns within the kickstarter worksheet, drag and drop the date created conversion column within rows, use outcomes as a column, and count of outcome as values. Therefore, creating a line chart to explain the different outcome types: successful, live, failed, and canceled over the time period of 12 months (January to December). For the outcomes based on goals analysis, I had to create a whole new set of data points to indicate the range of goal from "less than 1000" to "50000 or more." Afterwards, I had to use the COUNTIFS Function to determine number of failed, canceled, and successful outcomes based on the different ranges of goal as well as to indicate total projects, percentage of failed, canceled, and successful outcomes; thus using a line graph visualize those outcomes. One challenge I thought to myself I was having was to change percentage of the data reference on the y-axis from a double datatype to an integer datatype. However, I did not succeed even after making a bunch of internet search for sources that could have helped me do so. Notwithstanding, I came to realize that the data reference was correct given the data points found within the table.
+![]![Outcomes_vs_Goals](https://user-images.githubusercontent.com/99453696/159102303-43acf981-39a0-4694-923b-2447e1228ce0.png)
+![]![Theater_Outcomes_vs_Launch](https://user-images.githubusercontent.com/99453696/159102319-0c068bb3-42c8-4900-88b3-5acdeb46a62c.png)
+### Results
+* Considering my findings, two conclusions I can draw about the Theater Outcomes by Launch Date would be that:
+1. The month of May experienced the most successful outcomes based on launch dates, and
+2. The month of December experienced the least grand total of outcomes based on launch dates and lowest number of successful outcomes
+* In the same regard, two conclusions I can draw about the outcomes based on goals would be that:
+1. The goal range between 40,000 to 49,999 experienced the highest number of successful outcomes based on goal with 692 being an average of successful outcomes, and 
+2. That the goal, less than 1000 experienced the lowest total number of projects with the lowest successes and failures
+* As far as identifying limitations with the dataset, not that there isn't any limitation associated with the dataset, but I do not seem to identify any cardinal one. Unless for the instance where I got to see that there were some changes made to the dataset over time, which is very obvious.
+* Extensively, some other possible tables and and/or graphs that we could create would include
+1. Sum of Backers Count by Country using Parent Category as well as indicating years from the Kickstater worksheet ![]![SumofBackersCount](https://user-images.githubusercontent.com/99453696/159103601-742cbee5-e833-45bb-8e53-8d9409f42ba7.png)
+2.Sum of Percentage Funded using years, and filtering for dealines. ![]![SumofPercentageFunded](https://user-images.githubusercontent.com/99453696/159103835-fab73ce7-f4d2-4d35-a66c-dd34a7367383.png)
+
